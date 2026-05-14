@@ -90,7 +90,10 @@ async function seed() {
   console.log('----------------------------')
   console.log('Active campaigns:   9 (started Jan–Sep 2025, mixed categories)')
   console.log('Completed campaigns: 4 (Jan-Feb, Feb-Mar, Mar-Apr, Mar-May 2025)')
-  process.exit(0)
 }
 
-seed().catch(err => { console.error(err); process.exit(1) })
+module.exports = { seed }
+
+if (require.main === module) {
+  seed().then(() => process.exit(0)).catch(err => { console.error(err); process.exit(1) })
+}

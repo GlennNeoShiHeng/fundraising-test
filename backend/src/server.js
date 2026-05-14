@@ -55,7 +55,14 @@ app.use('/api/recommendations', require('./routes/sprint3/recommendations'))
 
 app.get('/', (req, res) => res.json({ message: 'Fundraising API is running' }))
 
-sequelize.sync({ alter: true }).then(() => {
+sequelize.sync({ alter: true }).then(async () => {
+  const { User } = require('./models')
+  const count = await User.count()
+  if (count === 0) {
+    console.log('🌱 Empty database detected — seeding...')
+    await require('./seed').seed()
+    console.log('✅ Seed complete')
+  }
   app.listen(PORT, () => {
     console.log(`✅ Server running at http://localhost:${PORT}`)
   })
