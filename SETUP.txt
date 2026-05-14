@@ -1,0 +1,91 @@
+CSIT314 Fundraising App - Setup Guide (Windows)
+=================================================
+
+REQUIREMENTS
+------------
+Install these before starting:
+- Node.js (v18 or later): https://nodejs.org
+- Git: https://git-scm.com
+
+After installing, open Command Prompt and check:
+    node -v
+    npm -v
+    git --version
+
+
+STEP 1 - Clone the Repo
+------------------------
+Open Command Prompt and run:
+
+    git clone https://github.com/GlennNeoShiHeng/CSIT314.git
+    cd CSIT314
+
+
+STEP 2 - Start the Backend
+---------------------------
+In the same terminal:
+
+    cd backend
+    npm install
+    node src/seed.js
+    npm run dev
+
+You should see: Server running at http://localhost:3001
+Leave this terminal open.
+
+
+STEP 3 - Start the Frontend
+-----------------------------
+Open a SECOND Command Prompt window:
+
+    cd path\to\CSIT314\frontend
+    npm install
+    npm run dev
+
+You should see: VITE ready at http://localhost:5173
+
+
+STEP 4 - Open the App
+----------------------
+Go to http://localhost:5173 in your browser.
+
+
+TEST ACCOUNTS
+-------------
+Email                       Password    Role
+admin@fundraising.com       admin123    User Admin
+pm@fundraising.com          pm123       Platform Manager
+john@fundraising.com        john123     Fund Raiser
+jane@fundraising.com        jane123     Donee
+
+Note: To log in as User Admin or Platform Manager,
+toggle the switch to "Staff Login" on the login screen.
+
+
+WHAT YOU CAN TEST
+-----------------
+Login as User Admin (admin@fundraising.com / admin123):
+  - Go to "Manage Users" in the navbar
+  - Create a new user account (Story #48)
+  - Search users by name, email or role (Story #57)
+  - Click any user row to view their details (Story #57)
+
+Login as Platform Manager (pm@fundraising.com / pm123):
+  - Go to "Categories" in the navbar
+  - Create a new fundraising category (Story #42)
+  - Edit an existing category (Story #43)
+  - Delete a category (Story #44)
+
+Login as Donee (jane@fundraising.com / jane123):
+  - Go to "Donate" in the navbar
+  - Select an active fundraising activity
+  - Enter an amount and payment method
+  - Confirm your donation (Story #6)
+
+
+TROUBLESHOOTING
+---------------
+- If "node is not recognized": restart your computer after installing Node.js
+- If port 3001 is in use: open backend\src\config.js and change the PORT number
+- If npm install fails: run Command Prompt as Administrator
+- If login fails: make sure you ran "node src/seed.js" in the backend folder first

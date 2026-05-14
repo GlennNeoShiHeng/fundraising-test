@@ -1,0 +1,30 @@
+# Claude Code local config
+.claude/
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Environment files
+.env
+frontend/.env
+backend/.env
+*.env.local
+
+# SQLite databases
+*.sqlite
+*.sqlite3
+*.db
+
+# Build output
+frontend/dist/
+frontend/build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
