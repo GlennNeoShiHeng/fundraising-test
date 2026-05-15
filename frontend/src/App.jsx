@@ -27,6 +27,7 @@ import AnnouncementsPage from './pages/sprint3/AnnouncementsPage'
 import ApprovalPage from './pages/sprint3/ApprovalPage'
 import RecurringDonationPage from './pages/sprint3/RecurringDonationPage'
 import RecommendationsPage from './pages/sprint3/RecommendationsPage'
+import SegmentDashboard from './pages/sprint3/SegmentDashboard'
 
 // Other (not in sprint plan but built)
 import BrowsePage from './pages/BrowsePage'
@@ -69,6 +70,7 @@ function AppRoutes() {
         {/* Sprint 3 */}
         <Route path="/activity/performance" element={<ProtectedRoute roles={['fund_raiser']}><PerformanceDashboard /></ProtectedRoute>} />
         <Route path="/activity/manage" element={<ProtectedRoute roles={['fund_raiser']}><ManageActivityPage /></ProtectedRoute>} />
+        <Route path="/activity/segments" element={<ProtectedRoute roles={['fund_raiser']}><SegmentDashboard /></ProtectedRoute>} />
         <Route path="/reports" element={<ProtectedRoute roles={['platform_manager']}><ReportPage /></ProtectedRoute>} />
         <Route path="/announcements" element={<ProtectedRoute roles={['platform_manager']}><AnnouncementsPage /></ProtectedRoute>} />
         <Route path="/approval" element={<ProtectedRoute roles={['platform_manager']}><ApprovalPage /></ProtectedRoute>} />

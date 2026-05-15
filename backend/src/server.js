@@ -52,6 +52,7 @@ app.use('/api/announcements', require('./routes/sprint3/announcements'))
 app.use('/api/approval', require('./routes/sprint3/approval'))
 app.use('/api/recurring-donations', require('./routes/sprint3/recurringDonations'))
 app.use('/api/recommendations', require('./routes/sprint3/recommendations'))
+app.use('/api/segment', require('./routes/sprint3/segment'))
 
 app.get('/', (req, res) => res.json({ message: 'Fundraising API is running' }))
 
