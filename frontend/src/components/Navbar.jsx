@@ -27,7 +27,8 @@ const NAV_LINKS = {
     { to: '/activity/ongoing', label: 'Ongoing Campaigns' },
     { to: '/activity/history', label: 'Completed History' },
     { to: '/activity/performance', label: 'Performance' },
-    { to: '/activity/manage', label: 'Manage Activities' }
+    { to: '/activity/manage', label: 'Manage Activities' },
+    { to: '/activity/segments', label: 'User Segments' }
   ],
   platform_manager: [
     { to: '/admin/categories', label: 'Categories' },
